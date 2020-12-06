@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="description" content="N窓は複数のYouTube動画を1つのページで同時に視聴できる複窓支援Webアプリです" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120375334-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120375334-3');
+  </script>
+  <title>N窓 使い方</title>
+  <style>
+      .embed-tweet {
+        position: absolute;
+        left: 30px;
+        top: 50px;
+        border: 4px solid #f5f5f5;
+        border-radius: 5px;
+        width: 220px;
+        }
+      @media only screen and (max-width: 1500px) {
+        .embed-tweet { display: none ; }
+      }
+      html{
+        max-width:1000px;margin:0 auto; }
+      img{
+        max-width:100%;border:1px #000000 solid; }
+        
+      body {
+        font-family: Helvetica, arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: white;
+        padding: 30px; }
+
+      body > *:first-child {
+        margin-top: 0 !important; }
+      body > *:last-child {
+        margin-bottom: 0 !important; }
+
+      a {
+        color: #4183C4; }
+      a.absent {
+        color: #cc0000; }
+      a.anchor {
+        display: block;
+        padding-left: 30px;
+        margin-left: -30px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0; }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin: 20px 0 10px;
+        padding: 0;
+        font-weight: bold;
+        -webkit-font-smoothing: antialiased;
+        cursor: text;
+        position: relative; }
+
+      h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+        background: url("https://raw.githubusercontent.com/gollum/gollum/master/lib/gollum/public/gollum/images/para.png") no-repeat 10px center;
+        text-decoration: none; }
+
+      h1 tt, h1 code {
+        font-size: inherit; }
+
+      h2 tt, h2 code {
+        font-size: inherit; }
+
+      h3 tt, h3 code {
+        font-size: inherit; }
+
+      h4 tt, h4 code {
+        font-size: inherit; }
+
+      h5 tt, h5 code {
+        font-size: inherit; }
+
+      h6 tt, h6 code {
+        font-size: inherit; }
+
+      h1 {
+        font-size: 28px;
+        color: black; }
+
+      h2 {
+        font-size: 24px;
+        border-bottom: 1px solid #cccccc;
+        color: black; }
+
+      h3 {
+        font-size: 18px; }
+
+      h4 {
+        font-size: 16px; }
+
+      h5 {
+        font-size: 14px; }
+
+      h6 {
+        color: #777777;
+        font-size: 14px; }
+
+      p, blockquote, ul, ol, dl, li, table, pre {
+        margin: 15px 0; }
+
+      hr {
+        background: transparent url("https://raw.githubusercontent.com/gollum/gollum/master/lib/gollum/public/gollum/images/dirty-shade.png") repeat-x 0 0;
+        border: 0 none;
+        color: #cccccc;
+        height: 4px;
+        padding: 0; }
+
+      body > h2:first-child {
+        margin-top: 0;
+        padding-top: 0; }
+      body > h1:first-child {
+        margin-top: 0;
+        padding-top: 0; }
+        body > h1:first-child + h2 {
+          margin-top: 0;
+          padding-top: 0; }
+      body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+        margin-top: 0;
+        padding-top: 0; }
+
+      a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+        margin-top: 0;
+        padding-top: 0; }
+
+      h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+        margin-top: 0; }
+
+      li p.first {
+        display: inline-block; }
+
+      ul, ol {
+        padding-left: 30px; }
+
+      ul :first-child, ol :first-child {
+        margin-top: 0; }
+
+      ul :last-child, ol :last-child {
+        margin-bottom: 0; }
+
+      dl {
+        padding: 0; }
+        dl dt {
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          padding: 0;
+          margin: 15px 0 5px; }
+          dl dt:first-child {
+            padding: 0; }
+          dl dt > :first-child {
+            margin-top: 0; }
+          dl dt > :last-child {
+            margin-bottom: 0; }
+        dl dd {
+          margin: 0 0 15px;
+          padding: 0 15px; }
+          dl dd > :first-child {
+            margin-top: 0; }
+          dl dd > :last-child {
+            margin-bottom: 0; }
+
+      blockquote {
+        border-left: 4px solid #dddddd;
+        padding: 0 15px;
+        color: #777777; }
+        blockquote > :first-child {
+          margin-top: 0; }
+        blockquote > :last-child {
+          margin-bottom: 0; }
+
+      table {
+        padding: 0; }
+        table tr {
+          border-top: 1px solid #cccccc;
+          background-color: white;
+          margin: 0;
+          padding: 0; }
+          table tr:nth-child(2n) {
+            background-color: #f8f8f8; }
+          table tr th {
+            font-weight: bold;
+            border: 1px solid #cccccc;
+            text-align: left;
+            margin: 0;
+            padding: 6px 13px; }
+          table tr td {
+            border: 1px solid #cccccc;
+            text-align: left;
+            margin: 0;
+            padding: 6px 13px; }
+          table tr th :first-child, table tr td :first-child {
+            margin-top: 0; }
+          table tr th :last-child, table tr td :last-child {
+            margin-bottom: 0; }
+
+      img {
+        max-width: 100%; }
+
+      span.frame {
+        display: block;
+        overflow: hidden; }
+        span.frame > span {
+          border: 1px solid #dddddd;
+          display: block;
+          float: left;
+          overflow: hidden;
+          margin: 13px 0 0;
+          padding: 7px;
+          width: auto; }
+        span.frame span img {
+          display: block;
+          float: left; }
+        span.frame span span {
+          clear: both;
+          color: #333333;
+          display: block;
+          padding: 5px 0 0; }
+      span.align-center {
+        display: block;
+        overflow: hidden;
+        clear: both; }
+        span.align-center > span {
+          display: block;
+          overflow: hidden;
+          margin: 13px auto 0;
+          text-align: center; }
+        span.align-center span img {
+          margin: 0 auto;
+          text-align: center; }
+      span.align-right {
+        display: block;
+        overflow: hidden;
+        clear: both; }
+        span.align-right > span {
+          display: block;
+          overflow: hidden;
+          margin: 13px 0 0;
+          text-align: right; }
+        span.align-right span img {
+          margin: 0;
+          text-align: right; }
+      span.float-left {
+        display: block;
+        margin-right: 13px;
+        overflow: hidden;
+        float: left; }
+        span.float-left span {
+          margin: 13px 0 0; }
+      span.float-right {
+        display: block;
+        margin-left: 13px;
+        overflow: hidden;
+        float: right; }
+        span.float-right > span {
+          display: block;
+          overflow: hidden;
+          margin: 13px auto 0;
+          text-align: right; }
+
+      code, tt {
+        margin: 0 2px;
+        padding: 0 5px;
+        white-space: nowrap;
+        border: 1px solid #eaeaea;
+        background-color: #f8f8f8;
+        border-radius: 3px; }
+
+      pre code {
+        margin: 0;
+        padding: 0;
+        white-space: pre;
+        border: none;
+        background: transparent; }
+
+      .highlight pre {
+        background-color: #f8f8f8;
+        border: 1px solid #cccccc;
+        font-size: 13px;
+        line-height: 19px;
+        overflow: auto;
+        padding: 6px 10px;
+        border-radius: 3px; }
+
+      pre {
+        background-color: #f8f8f8;
+        border: 1px solid #cccccc;
+        font-size: 13px;
+        line-height: 19px;
+        overflow: auto;
+        padding: 6px 10px;
+        border-radius: 3px; }
+        pre code, pre tt {
+          background-color: transparent;
+      border: none; }
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="embed-tweet">
+  <a class="twitter-moment" data-theme=”dark” href="https://twitter.com/i/moments/1172124794403184640?ref_src=twsrc%5Etfw" >N窓アナウンス</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<h1 id="n窓-β版">N窓 (β版)</h1>
+<p>N窓は複数のYouTube動画を1つのページで同時に視聴できるWebアプリです。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/62026076-e6a25880-b214-11e9-8dbf-331db546aa92.gif" alt="" />
+</figure>
+<p>サイトURL: <a href="https://piporoid.net/NMado/">https://piporoid.net/NMado/</a> (※スマホやタブレットでアクセスした場合はモバイル版の<a href="https://piporoid.net/NMadoMobile/usage.html">N窓Mobile</a>へリダイレクトされます。)</p>
+<ul>
+<li><a href="#はじめに">はじめに</a></li>
+<li><a href="#使い方">使い方</a></li>
+<li><a href="#拡張機能">拡張機能（音声の左右振り分けなど）</a></li>
+<li><a href="#要望支援など">要望・支援など</a></li>
+<li><a href="#プライバシーポリシー">プライバシーポリシー</a></li>
+</ul>
+<h2 id="はじめに">はじめに</h2>
+<p>はじめに、<a href="#n窓enhancer"><strong>N窓Enhancer</strong></a>を導入することをおすすめします。導入することで、使い方で説明する多くの操作をより快適に行うことが出来る上に、チャットの表示や通知機能を使用できるようになります。</p>
+<h2 id="使い方">使い方</h2>
+<ul>
+<li><a href="#動画の追加">動画の追加</a></li>
+<li><a href="#動画ウィンドウの移動">動画ウィンドウの移動</a></li>
+<li><a href="#動画ウィンドウの縮小拡大">動画ウィンドウの縮小/拡大</a></li>
+<li><a href="#動画ウィンドウの入れ替え">動画ウィンドウの入れ替え</a></li>
+<li><a href="#動画ウィンドウを閉じる">動画ウィンドウを閉じる</a></li>
+<li><a href="#ウィンドウの最大化">ウィンドウの最大化</a></li>
+<li><a href="#レイアウトの保存と読み込み">レイアウトの保存と読み込み</a></li>
+<li><a href="#urlの共有">URLの共有</a></li>
+<li><a href="#live-chatウィンドウの表示">Live Chatウィンドウの表示</a></li>
+<li><a href="#動画音声の左右への振り分け">動画音声の左右への振り分け</a></li>
+<li><a href="#n窓enhancer">N窓Enhancer</a></li>
+</ul>
+<h3 id="動画の追加">動画の追加</h3>
+<p>ヘッダーのフォームにURLを入力して追加をクリックすることで動画を追加できます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/57180210-7e680300-6ec1-11e9-9a8a-06537cb20d31.gif" alt="" />
+</figure>
+<p>拡張機能「<a href="#youtubeのページから直接動画を追加する">N窓Quick</a>」を使うことでより簡単に動画を追加できるようになります。</p>
+<h3 id="動画ウィンドウの移動">動画ウィンドウの移動</h3>
+<p>ヘッダーのペンマークのアイコンをクリックすることでモードを切り替えて<strong>編集モード</strong>に入ることができます。 この状態で動画のウィンドウをドラッグすることで動画ウィンドウを移動させることができます。編集モードを終了する場合はもう一度ペンマークをクリックしてください。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/58950637-3858d480-87ca-11e9-9385-cd56b7523a2c.gif" alt="" />
+</figure>
+<h3 id="動画ウィンドウの縮小拡大">動画ウィンドウの縮小/拡大</h3>
+<p>動画ウィンドウの移動と同様に<strong>編集モード</strong>に入ります。 この状態で動画ウィンドウの右下をドラッグすることで動画ウィンドウのりサイズができます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/58950638-38f16b00-87ca-11e9-95c0-ca7c483e0f18.gif" alt="" />
+</figure>
+<p>また、動画ウィンドウをダブルクリックすることで、他の全てのウィンドウのサイズをダブルクリックしたウィンドウのサイズに合わせることができます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/59170714-dfe35780-8b7a-11e9-8b7d-4d11a803849c.gif" alt="" />
+</figure>
+<h3 id="動画ウィンドウの入れ替え">動画ウィンドウの入れ替え</h3>
+<p>動画ウィンドウが複数存在する状態で、動画ウィンドウの移動と同様に<strong>編集モード</strong>に入ります。 編集モード中に動画ウィンドウの上で、マウスホイールをクリックすると動画ウィンドウの色が変化します。 この状態のときに別の動画ウィンドウの上でマウスホイールをクリックすると、クリックされたウィンドウと先程色が変化したウィンドウが入れ替わります。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/58950639-38f16b00-87ca-11e9-9a9e-0f6ab6cb5606.gif" alt="" />
+</figure>
+<h3 id="動画ウィンドウを閉じる">動画ウィンドウを閉じる</h3>
+<p>動画ウィンドウの移動と同様に<strong>編集モード</strong>に入ります。このとき動画ウィンドウの右上に表示されている×ボタンを押すと動画ウィンドウを閉じれます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/58950636-3858d480-87ca-11e9-90c1-3f0b31bf1720.gif" alt="" />
+</figure>
+<h3 id="ウィンドウの最大化">ウィンドウの最大化</h3>
+<p>ヘッダーの<strong>max</strong>ボタンを押すことでウィンドウをブラウザサイズに合わせて最大化できます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/62346600-ab17cf00-b531-11e9-86a0-2fed4ccff8b8.gif" alt="" />
+</figure>
+<p>また、maxボタンを長押しして点灯させることで常に最大化して表示させるようにも出来ます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/62346603-ace19280-b531-11e9-9b00-bc353fcad0ea.gif" alt="" />
+</figure>
+<h3 id="レイアウトの保存と読み込み">レイアウトの保存と読み込み</h3>
+<p>ヘッダーの<strong>レイアウト保存</strong>ボタンを押すことでそのときのレイアウトに名前をつけて保存することができます。保存したレイアウトは<strong>レイアウト読み込み</strong>で読み込むことができます。</p>
+<p><strong>好みのレイアウトを保存した後は最大化と読み込みを自動にしておくと便利です!</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/78466764-64254d80-7740-11ea-832e-f70dc260dd7a.gif" alt="" />
+</figure>
+<p>また、保存したレイアウトは右クリックでメニューを開いてお気に入り・削除することができ、 お気に入りにしておくと設定で<strong>自動読み込み</strong>をオンにしている場合に自動的にお気に入りのレイアウトが読み込まれます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/78466765-6687a780-7740-11ea-97ff-b0e9efab3f09.gif" alt="" />
+</figure>
+<h3 id="urlの共有">URLの共有</h3>
+<p>URLの共有機能を使うことであなたの今のウィンドウレイアウトを他の人に共有することができます。 共有を行うにはサイト右上の共有ボタンを押して、URLをクリップボードにコピーするかTweetで共有するかを選んでください。</p>
+<p>※窓数が多くなるとTwitterの文字数制限に引っかかったりして動かないかもしれないです</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/57693591-8cb5dc00-7684-11e9-9191-433ebd21c81f.gif" alt="" />
+</figure>
+<h3 id="live-chatウィンドウの表示">Live Chatウィンドウの表示</h3>
+<p>動画ウィンドウに表示されている動画がLive配信(<strong>アーカイブは不可</strong>)の場合には、<strong>編集モード中</strong>に動画ウィンドウ上で右クリックをしチャット表示切り替えを選択することでLive Chatウィンドウを表示することができます。 <img src="https://user-images.githubusercontent.com/25645304/57179866-6d1cf780-6ebd-11e9-87e1-24187f2ff655.gif" alt="livechat" /></p>
+<h2 id="拡張機能">拡張機能</h2>
+<h3 id="動画音声の左右への振り分け">動画音声の左右への振り分け</h3>
+<h4 id="chrome">Chrome</h4>
+<p><a href="https://chrome.google.com/webstore/detail/n%E7%AA%93-panner/ehmiccmnhambhdkfchgnkhebmjpahhjb?hl=ja">N窓 Panner</a>というアドオンを追加することで動画音声の左右への振り分けが可能になります。 アドオンを追加するとYouTube動画上にある音量調節用のスライダーの横に、音声を左右に振り分けるスライダーが追加されます。</p>
+<p>アドオン追加後スライダーが追加されない場合には<strong>ページの再読込</strong>や、<strong>Chromeの再起動</strong>が必要な可能性があります。 また、アドオンが正常に動作しない場合には、Chromeの設定で音声自動再生を許可する必要があるかもしれません。 設定する場合はURL欄の左にある錠前のマークをクリックし設定画面を開いてください。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/62286511-d1d2f880-b492-11e9-87c4-807452d8a032.png" alt="" />
+</figure>
+<p>設定画面を開いたら音声のところを許可(Allow)にしてください。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/62286509-d13a6200-b492-11e9-895c-b213c7400d58.png" alt="" />
+</figure>
+<h4 id="firefox">Firefox</h4>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/panner-for-youtube/?src=search">Panner for YouTube</a>というアドオンを追加することで動画音声の左右への振り分けが可能になります。 アドオンが正常に動作しない場合には、Firefoxの設定でYouTubeの音声自動再生を許可する必要があるかもしれません。 自動再生許可の方法については次の記事を参考にすると良いと思います。</p>
+<p><a href="https://japan.cnet.com/article/35132279/">3月の「Firefox 66」、音声の自動再生をデフォルトで無効に</a></p>
+<h3 id="n窓enhancer">N窓Enhancer</h3>
+<p>N窓Enhancerを導入することでN窓の動作を強化することができます。編集モードにいちいち切り替えるのめんどくさいんじゃい！</p>
+<p><strong>最新 v1.0.1</strong> (公開日: 2020/02/02)</p>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/n%E7%AA%93-enhancer/fcbaigncejcofookoogiiojieaoefgii?hl=ja">Chrome版(Web Store)</a></li>
+<li><a href="https://addons.mozilla.org/ja/firefox/addon/nmado-enhancer/">Firefox版</a></li>
+</ul>
+<p>zip版では実験的な機能が使用可能です。現在はスクリーンショット機能を試すことが出来ます。 <strong>zip版インストール方法については<a href="#Chrome版のインストール方法">Chrome版のインストール方法</a>を参照。</strong></p>
+<p><strong>最新 v1.1.0</strong> (公開日: 2020/02/05) - <a href="https://github.com/pipopa/NMado-Enhancer/releases/download/v1.1.0/NMado-Enhancer.zip">Chrome版(zip)</a></p>
+<h4 id="モード変更なしでウィンドウを操作">モード変更なしでウィンドウを操作</h4>
+<p>動画の移動や入れ替え、削除やチャットウィンドウの表示をする際は編集モードに入る必要がありましたが、N窓Enhancerを導入すればそれらの操作をモード変更することなく行えるようになります。 <img src="https://user-images.githubusercontent.com/25645304/73545991-c4b5b700-447f-11ea-9b28-15a10b228d0c.gif" alt="modeless" /></p>
+<h4 id="特定のユーザのチャットの通知とハイライト">特定のユーザのチャットの通知とハイライト</h4>
+<p><a href="https://twitter.com/clngn/status/1000346787973025792">みんなよう見とる</a>の機能をN窓でも使えるようになります。N窓Enhancerの設定(<strong>※N窓のページではなく拡張機能の設定ページ</strong>)で通知 or ハイライトにチェックを入れた上でユーザ名をリストに記入した上で保存をすれば有効になります。</p>
+<h4 id="チャット欄を広げる">チャット欄を広げる</h4>
+<p>N窓Enhancerの設定ページより「マウスオーバー時のみチャット入力欄を表示する」のチェックを入れることで有効に出来ます。 有効にするとチャット入力欄が非表示になります。 カーソルをチャットウィンドウの上に移動させると入力欄が表示されます。</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/62026895-4699fe80-b217-11e9-93c1-02f5e5bdddd7.gif" alt="" />
+</figure>
+<h3 id="youtubeのページから直接動画を追加する">YouTubeのページから直接動画を追加する</h3>
+<p><strong>Chrome版はストアからではなくzipを直接インストールする必要があります。インストール方法については<a href="#Chrome版のインストール方法">Chrome版のインストール方法</a>を参照。</strong></p>
+<p>N窓 Quickというアドオンを導入することで<strong>いつから.link</strong>や<strong>YouTube</strong>の「ホーム」や「登録チャンネル」、「待機画面」、「動画再生画面」、vnumaの一部ページなどから動画を直接追加できるようになります。 URLをいちいちコピーする必要がないので<strong>爆速</strong>です!!</p>
+<p><strong>最新 v1.4.1</strong> (公開日: 2020/04/13)</p>
+<ul>
+<li><a href="https://github.com/pipopa/NMado-Quick/releases/download/v1.4.1/NMado-Quick-1.4.1.zip">Chrome版(zip)</a></li>
+<li><a href="https://addons.mozilla.org/ja/firefox/addon/n%E7%AA%93-quick/">Firefox版</a></li>
+</ul>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/62026893-4568d180-b217-11e9-91c6-e40822a2213f.gif" alt="" />
+</figure>
+<h4 id="chrome版のインストール方法">Chrome版のインストール方法</h4>
+<p>Chrome版の拡張はzipを手動でChromeにインストールする必要があります。 インストール手順は以下の通りです。</p>
+<ol type="1">
+<li>URL入力欄に<strong>chrome://extensions</strong>と入力します</li>
+</ol>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/64486882-e1054d00-d26d-11e9-83a8-b9954e68ccf5.gif" alt="" />
+</figure>
+<ol start="2" type="1">
+<li>右上のDeveloper modeを有効にします。</li>
+</ol>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/64486883-e1054d00-d26d-11e9-842e-4a7dd9c61367.gif" alt="" />
+</figure>
+<ol start="3" type="1">
+<li>ダウンロードした「NMado-Quick.zip」をドラッグ・アンド・ドロップします。</li>
+</ol>
+<figure>
+<img src="https://user-images.githubusercontent.com/25645304/64486884-e1054d00-d26d-11e9-8e5a-0b8103aab530.gif" alt="" />
+</figure>
+<h2 id="要望支援など">要望・支援など</h2>
+<p>このアプリに関して要望などがありましたら「 #N窓 」でツイートしてくれたら、可能な限り確認するようにします。 同様の要望が多かったりしたらその機能を取り入れたりするかもしれないです。 「 #N窓 」は要望以外にも感想とか、N窓に関連すること全般に利用していただけたら嬉しいです Uo･ｪ･oU</p>
+<p><a href="https://twitter.com/intent/tweet?text=要望とか感想などUo･ｪ･oU&amp;hashtags=N窓">#N窓でTweetする</a></p>
+<p>また、開発者に対して支援をしてくださるという方はこちらのリストから</p>
+<p><a href="https://www.amazon.jp/hz/wishlist/ls/NACL9XWEDWN1?ref_=wl_share">https://www.amazon.jp/hz/wishlist/ls/NACL9XWEDWN1?ref_=wl_share</a></p>
+<h2 id="プライバシーポリシー">プライバシーポリシー</h2>
+<p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。</p>
+<p>このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関して、詳しくは<a href="https://www.google.com/analytics/terms/jp.html">こちら</a>を参照してください。</p>
+<hr />
+<h4 id="gif中の動画">gif中の動画</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=dqzKzX79Ht4">パンダのシャンシャン、痛い食事とハズバンダリートレーニング</a></li>
+<li><a href="https://www.youtube.com/watch?v=jWWPXC86vM0">いちご大福の作り方 - 使えるレシピ</a></li>
+</ul>
+</body>
+</html>
